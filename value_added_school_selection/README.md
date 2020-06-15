@@ -23,11 +23,10 @@ This repository is related to the economic research problem Kyle Brookman is pur
 >> *	`posCol` = college position
 
 `PLAYER_nfl.xlsx`
-- Every NFL player on a roster since 2002 (**ERROR: TIME FRAME IS EARLIER**)
-(** the variable "start" is the year the player started in the NFL. However, the data itself is taken from the seasons spanning 2002 - 2019. Anyone with a start year on or before 2004 can be dropped because there wont be anything from the recruit data to merge with. 2005 will likely see some mergable observations trickle in and start picking up in 2006.  **)
-- Merge **all columns** onto “recruit247” (**VALIDATE: MERGED ALL?**)
-- recruit data starts in 2002 so no one will show up in the PLAYER_NFL until at least 2004 (**ERROR: TIME FRAME STARTS 2000**)
-- The variable start is the year they started in the NFL so you should be able to filter out anything before 2004 (**VALIDATE: REMOVED ALL BEFORE 2000**)
+- Every NFL player on a roster since 2002 (**ERROR: TIME FRAME IS EARLIER  | The variable "start" is the year the player started in the NFL. However, the data itself is taken from the seasons spanning 2002 - 2019. Anyone with a start year on or before 2004 can be dropped because there wont be anything from the recruit data to merge with. 2005 will likely see some mergable observations trickle in and start picking up in 2006.**)
+- Merge **all columns** onto “recruit247” (**VALIDATE: MERGED ALL?  | This was ment to say keep all variables from the PLAYER_nfl. Merge on individual player as in the other datasets.**) 
+- recruit data starts in 2002 so no one will show up in the PLAYER_NFL until at least 2004 (**ERROR: TIME FRAME STARTS 2000  | That's my bad, I should have dropped those before hand. There are various quality control and specification reasons to drop recruits in 2000-2001. I have a hard time parting with the data but lets drop observations for years 2000 and 2001 in recruit247 data. **)
+- The variable start is the year they started in the NFL so you should be able to filter out anything before 2004 (**VALIDATE: REMOVED ALL BEFORE 2000  | IF we start with recruit data on year 2002, then you can safely/conservatively remove all players with a start date = 2003 or earlier. Keeping 2004 is playing it very safe because there is tiny chance mergable players happen in that year. If nothing happens on the first pass for start = 2004 folks, then move right along to 2005. Some 2002 recruits should start to arrive in 2005 and a wave in 2006 and thereafter. **)
 > *	`UNITID` is coded as the most recent school
 >> * May match with `UNITID_col` or `UNITID_comRec` in `recruit247`
 > * `pos1` and `pos2` in `PLAYER_nfl` may help with the merge
