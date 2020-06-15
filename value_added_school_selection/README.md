@@ -24,6 +24,7 @@ This repository is related to the economic research problem Kyle Brookman is pur
 
 `PLAYER_nfl.xlsx`
 - Every NFL player on a roster since 2002 (**ERROR: TIME FRAME IS EARLIER**)
+(** the variable "start" is the year the player started in the NFL. However, the data itself is taken from the seasons spanning 2002 - 2019. Anyone with a start year on or before 2004 can be dropped because there wont be anything from the recruit data to merge with. 2005 will likely see some mergable observations trickle in and start picking up in 2006.  **)
 - Merge **all columns** onto “recruit247” (**VALIDATE: MERGED ALL?**)
 - recruit data starts in 2002 so no one will show up in the PLAYER_NFL until at least 2004 (**ERROR: TIME FRAME STARTS 2000**)
 - The variable start is the year they started in the NFL so you should be able to filter out anything before 2004 (**VALIDATE: REMOVED ALL BEFORE 2000**)
